@@ -11,6 +11,7 @@ object PublishedDate {
   def apply(dateString: String): Either[Exception, PublishedDate] = {
     try {
       val date = LocalDate.parse(dateString, dateTimeFormatter)
+      val hoge := 'hoge'
       Right(PublishedDate(date))
     } catch {
       case ex: Exception => Left(ex)
